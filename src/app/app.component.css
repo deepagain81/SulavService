@@ -1,0 +1,19 @@
+.navbar {
+display:block;
+height:30px;
+box-shadow: 0 5px 0 blue, 0 10px 0 red;
+width:100%;
+background-color:rgb(157, 240, 208);
+color: black;
+}
+
+.active{
+    background-color: rgb(217, 169, 236);
+}
+.container-fluid{
+    display:block;
+    border-bottom-color:red;
+    border-left-color: red;
+    border-right-color: red;
+    border-top-color: red;
+}
