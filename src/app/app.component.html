@@ -1,33 +1,62 @@
-<div >
-  <div>
-  <nav class="navbar navbar navbar">
-  
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <!--Another Component for company logo-->
-        <a class="navbar-brand" href="#">SulavService</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="nav-link"><a [routerLink]="['/home']">Home</a></li>
-        <li><a [routerLink]="['/product']">Services</a></li>
-        <li><a [routerLink]="['/profile']" >Our Profile</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/register']" ><span class="glyphicon glyphicon-user"> Register</span></a></li>
-        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
-      </ul>
-  
-    </div>
-  
-  </nav>
-  </div>
+<script>
+  let mainNav = document.getElementById('js-menu');
+  let navBarToggle = document.getElementById('js-navbar-toggle');
 
-  <div class='container'>
-    <router-outlet></router-outlet>
+  navBarToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('active');
+  });
+</script>
+
+
+<div class="container-fluid">
+  
+
+<nav class="navbar">
+  <span class="navbar-toggle" id="js-navbar-toggle">
+    <i class="fad fa-bars"></i>  </span>
+  <a href="#" class="logo">
+    <img src="../assets/logo.PNG" width="70" height="60" class="d-inline-block align-top" alt="SulavService"> SulavService
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a class="nav-link" [routerLink]="['/home']">Home</a>
+      </li>
+
+      <li>
+        <a class="nav-link" [routerLink]="['/product']">Services</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/about']">About</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/admin']">Admin</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+      <li **ngIf="expression">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+ 
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      
+    </ul>
+  </div>
+  
+  
     
-  </div>
-  </div>
+</nav>
 
+
+
+</div>  
+  
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>
 
   
 
