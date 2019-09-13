@@ -6,6 +6,7 @@ export function getAuthServiceConfigs(){
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider("693741105724-eii13tgucibo4pidihugp9chdvbs8a8m.apps.googleusercontent.com")
         }
+        //other social media networks
     ]);
     return config;
 }

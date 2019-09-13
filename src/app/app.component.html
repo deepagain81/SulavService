@@ -33,12 +33,18 @@
       <li>
         <a class="nav-link" [routerLink]="['/admin']">Admin</a>
       </li>
-      <li>
+      <li *ngIf !="loggedIn; else logout">
         <a class="nav-link" [routerLink]="['/login']">Login</a>
       </li>
-      <li **ngIf="expression">
-        <a class="nav-link" [routerLink]="['/login']">Login</a>
-      </li>
+      
+        <ng-template #logout>
+          <li>
+          <button class="btn-danger" (click)="signOut()" type="button">Log Out</button>
+          </li>
+        </ng-template>
+        
+        
+     
  
     </ul>
     <ul class="nav navbar-nav navbar-right">

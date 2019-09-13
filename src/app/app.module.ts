@@ -9,8 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from "@angular/common/http";
-import { SocialLoginModule, AuthServiceConfig,  GoogleLoginProvider} from 'angularx-social-login';
-
+import { HttpModule } from "@angular/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +19,7 @@ import { SocialLoginModule, AuthServiceConfig,  GoogleLoginProvider} from 'angul
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     ProductModule,
     SigningModule,
     SharedModule,
